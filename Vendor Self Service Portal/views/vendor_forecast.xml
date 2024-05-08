@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ___________Define action for Forecast_____________ -->
+
+
+        <record id="actions_forecast" model="ir.actions.act_window">
+            <field name="name">Forecast</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">new.forecast</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- ______________Define form view for Forecast_________________ -->
+
+        <record id="view_forecast_form" model="ir.ui.view">
+            <field name="name">new.forecast.form</field>
+            <field name="model">new.forecast</field>
+            <field name="arch" type="xml">
+                <form>
+
+                   <header>
+                      <!-- Add a button to trigger the report generation -->
+                       <button name="action_generate_report" string="Generate Report" type="object" class="oe_highlight"/>
+                   </header>
+                    <sheet>
+                        <group>
+                            <!-- ______Display fields for product name, expected quantity, forecast date, and product ID________ -->
+
+                            <field name="product_name"/>
+                            <field name="expected_quantity"/>
+                            <field name="forecast_date"/>
+                            <field name="product_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- _____________Define tree view for Forecast_______________ -->
+
+        <record id="view_forecast_tree" model="ir.ui.view">
+            <field name="name">new.forecast.tree</field>
+            <field name="model">new.forecast</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- _______Display fields for expected quantity, product name, and forecast date_______ -->
+
+                    <field name="expected_quantity"/> 
+                    <field name="product_name"/> 
+                    <field name="forecast_date"/>
+                   
+                </tree>
+            </field>
+        </record>
+
+        <!-- ____________Define portal view for Forecast_____________ -->
+
+        <!-- <record id="view_forecast_portal" model="ir.ui.view">
+            <field name="name">new.forecast.portal</field>
+            <field name="model">new.forecast</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group> -->
+                            <!-- _____Display fields for product name, expected quantity, forecast date, and product ID____ -->
+                            <!-- <field name="product_name"/>
+                            <field name="expected_quantity"/>
+                            <field name="forecast_date"/>
+                            <field name="product_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> -->
+
+    </data>
+</odoo>

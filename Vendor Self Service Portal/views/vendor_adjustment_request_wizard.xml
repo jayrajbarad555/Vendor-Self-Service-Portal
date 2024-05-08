@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- ___________Define view for adjustment request wizard form_____________ -->
+
+        <record id="view_adjustment_request_wizard_form" model="ir.ui.view">
+            <field name="name">adjustment.request.wizard.form</field>
+            <field name="model">adjustment.request.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Adjustment Request">
+                    <group>
+                        <!-- ______Display fields for adjustment detail and comment________ -->
+
+                        <field name="adjustment_detail"/>
+                        <field name="comment"/>
+
+                    </group>
+                    <footer>
+                        <!-- ________Add buttons for submit and cancel actions__________ -->
+
+                        <button string="Submit" type="object" name="submit_request" class="btn-primary"/>
+                        <button string="Cancel" special="cancel"/>
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- _________________Define action for adjustment request wizard________________ -->
+
+        <record id="action_adjustment_request_wizard" model="ir.actions.act_window">
+            <field name="name">Adjustment Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">adjustment.request.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+    </data>
+</odoo>

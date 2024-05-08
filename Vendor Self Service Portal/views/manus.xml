@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!-- ******************************MENUS******************************************************** -->
+        
+    <!-- _______________VENDOR SELF-SERVICE PORTAL MENU____________________________ -->
+
+        <menuitem id="menu_Vendor_Self_Service_Portal_root"  
+                  name="Vendor Self Service Portal"
+                  sequence="10"
+                  />
+
+    <!-- _______________FORECAST MENU____________________________ -->
+
+        <menuitem id="menu_forecast"  
+                  name="Forecast"
+                  parent="menu_Vendor_Self_Service_Portal_root"
+                  action="actions_forecast"
+                  sequence="10"
+                  />
+   
+    <!-- _____________VENDOR ADJUSTMENT REQUEST MENU_____________ -->
+
+        <menuitem id="menu_Vendor_Adjustment_Request"  
+                  name="Vendor Adjustment Request"
+                  parent="menu_Vendor_Self_Service_Portal_root"
+                  action="actions_Vendor_Adjustment_Request"
+                  sequence="10"
+                  />
+
+    <!-- _____________FORECAST DETAILS MENU_____________ -->
+
+        <menuitem id="menu_forecast_portal"  
+                  name="Forecast Details"
+                  parent="menu_Vendor_Self_Service_Portal_root"
+                  action="actions_forecast"
+                  sequence="10"/>
+
+
+    <!-- ___________ADJUSTMENT REQUEST WIZARD MENU______________ -->
+
+        <menuitem id="menu_adjustment_request_wizard"  
+                  name="Submit Adjustment Request"
+                  parent="menu_Vendor_Self_Service_Portal_root"
+                  action="action_adjustment_request_wizard"
+                  sequence="10"/>
+
+
+    </data>
+</odoo>
